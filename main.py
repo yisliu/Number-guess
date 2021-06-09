@@ -12,20 +12,20 @@ def game():
   while turns<10:
     if int(guess) == num:
       print("You guessed the right number!")
-      print("You tried: " + str(turns) + "time.")
+      print("You tried: " + str(turns) + " time.")
       print("You used " + str(hint) + " hints")
       turns = 10
     else:
       if int(guess)<num:
         print("It is not " + guess)
         print("try again")
-        print("Hint: it is bigger than your guess.")
+        guess = input("Hint: it is bigger than your guess.")
         hint = hint + 1
         turns = turns + 1
       elif int(guess)>num:
         print("Your guess is wronge.")
         print("try again")
-        print("Hint: the number is smaller than your guess")
+        guess = input("Hint: the number is smaller than your guess")
         hint = hint + 1
         turns = turns + 1
 
