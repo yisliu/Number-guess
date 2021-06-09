@@ -1,7 +1,7 @@
 import random
 
 def game():
-  turns = 0
+  turns = 1
   hint = 0
   num = random.randint(1,10)
   print("-----------------------------------")
@@ -10,13 +10,13 @@ def game():
   print(num)
   guess = input("Guess a number from 1 to 10: ")
   while turns<10:
-    if guess == num:
+    if int(guess) == num:
       print("You guessed the right number!")
-      print("You tried: " + turns)
-      print("You used " + hint + " hints")
+      print("You tried: " + str(turns) + "time.")
+      print("You used " + str(hint) + " hints")
       turns = 10
     else:
-      if guess<num:
+      if int(guess)<num:
         print("It is not " + guess)
         print("try again")
         print("Hint: it is bigger than your guess.")
